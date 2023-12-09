@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const items = [
   {
     name: "Canon",
@@ -49,13 +47,13 @@ const ClientItem = ({ url, name }: { url: string; name: string }) => {
 };
 const ClientList = () => {
   return (
-    <div className="flex overflow-hidden border-t-2 border-b-2 border-zinc-800 py-2 gap-6 select-none">
-      <div className="flex-shrink-0 flex min-w-full justify-around gap-16 items-center running">
+    <div className="flex overflow-hidden border-t-2 border-b-2  py-2 gap-6 select-none z-50 relative bg-black">
+      <div className="flex-shrink-0 flex min-w-full justify-around gap-16 items-center running ">
         {items.map((item) => (
           <ClientItem key={item.name} name={item.name} url={item.url} />
         ))}
       </div>
-      <div className="flex-shrink-0 flex min-w-full justify-around gap-16 items-center running">
+      <div className="flex-shrink-0 flex min-w-full justify-around gap-16 items-center running ">
         {items.map((item) => (
           <ClientItem key={item.name} name={item.name} url={item.url} />
         ))}
